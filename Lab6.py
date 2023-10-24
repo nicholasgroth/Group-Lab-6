@@ -3,7 +3,7 @@ def encode(password):
     encoded = ""
     for digit in password:
         new = int(digit)
-        new += 31
+        new += 3
         encoded += str(new)
     return encoded
 
