@@ -3,12 +3,18 @@ def encode(password):
     encoded = ""
     for digit in password:
         new = int(digit)
-        new += 31
+        new += 3
         encoded += str(new)
     return encoded
 
+#Nicholas Groth
 def decode(encoded):
-    pass
+    decoded = ""
+    for digit in encoded:
+        new = int(digit)
+        new -= 3
+        decoded += str(new)
+    return decoded
 
 def main():
     while True:
@@ -24,6 +30,8 @@ def main():
             encoded_pass = encode(ini_pass)
             print("Your password has been encoded and stored! ")
             print()
+        if menu_opt = 2:
+            print(f"The encoded password is {encode(ini_pass)}, and the original password is {decode(encoded_pass)}.")
         if menu_opt == 3:
             break
 
